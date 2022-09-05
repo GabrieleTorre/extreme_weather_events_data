@@ -36,9 +36,9 @@ headers = {
   'Connection': 'keep-alive'
 }
 
-database = {'user': "root", 'password': "rotolone",
-            "host": "0.0.0.0", "port": 3306,
-            "database": "extreme_weather_events"}
+database = {'user': "admin", 'password': "R0t0l0n3$!",
+            "host": "agritech.cuxplwczrxtp.us-east-1.rds.amazonaws.com",
+            "port": 3306, "database": "extreme_weather_events"}
 
 
 
@@ -104,7 +104,7 @@ def main(start_date, ndays):
 
 if __name__ == '__main__':
     df = main(datetime.now().date(), 30)
-
+    
     cnx = mysql.connector.connect(**database)
     cursor = cnx.cursor()
 
